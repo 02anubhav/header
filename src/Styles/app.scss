@@ -1,0 +1,267 @@
+@use "mixin" as m;
+
+// COLORS
+$primary-color : #0F1214;
+$theme-color : #ffffff;
+$cardsBg-color : #1adb91;
+$chartsBg-color : #c6d4eb;
+$cal-rtBg-color : #ffd900;
+$redBg-color : #c71414;
+$whiteBg-color : #ffffff;
+$sideBar-color : red;
+
+// SCREEN
+$screen-width : 100vw;
+$screen-height : 100vh;
+
+// SIDEBAR
+$CloseSidebar-width : 65px;
+$OpenSideBar-width : 240px;
+
+// HEADER
+$header-height : 48px;
+$header-width : calc(100% - #{$CloseSidebar-width});
+
+// FLEX
+$Uni-gap : 8px;
+
+// ASPECT RATIO
+// $ratio : 16/9;
+
+// PADDING
+$paddingX : 12px;
+$paddingY : 2px;
+
+// MARGIN
+$marginX : 5px;
+$marginY : 0;
+//
+$section2-width : 60%;
+$section1-width : 40%;
+// SCROLLBAR
+$scrollbar-width : 8px;
+//icon
+$icon-width:32px;
+$icon-height:32px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.container {
+  @include m.flex(row, space-between, center, wrap);
+  width: $header-width;
+  background-color: $primary-color;
+  height: $header-height;
+  padding: $paddingY $paddingX;
+  margin-left: $CloseSidebar-width;
+
+}
+
+.Section2{
+  // background-color: $redBg-color;
+  width: $section2-width;
+  gap: $Uni-gap;
+  @include m.flex(row, flex-left, center, wrap);
+}
+
+.section1{
+  @include m.flex(row, space-between, center, wrap);
+  // background-color:$cal-rtBg-color;
+  gap: $Uni-gap;
+}
+
+
+.section3{
+color: white;
+// background-color: $cardsBg-color;
+@include m.flex(row, flex-end , center, wrap);
+gap: $Uni-gap;
+}
+
+//------------------notification bar-------------------------------//
+
+.notification-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $icon-width;
+  height: $icon-height;
+  background: #141414;
+  border-radius: 12px;
+  border: 2px solid #262626;
+  box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.05),
+      inset -2px -2px 5px rgba(0, 0, 0, 0.5),
+      3px 3px 10px rgba(0, 0, 0, 0.8);
+
+}
+.notification-icon {
+  color: #fff;
+  height: 18px !important;
+  width: 18px !important;
+}
+
+.badge {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  background: #ff4d58;
+  color: white;
+  font-size: 8px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(30%, -30%);
+}
+
+
+//-----------------search bar--------------------//
+.search-container {
+  display: flex;
+  align-items: center;
+  background: #141414;
+  padding: 5px 8px;
+  border-radius: 6px;
+  border: 2px solid #262626;
+  height: $icon-height;
+  max-width: 40% !important;
+  position: relative;
+  box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.05),
+      inset -2px -2px 5px rgba(0, 0, 0, 0.5),
+      3px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.search-icon {
+  color: #fff;
+  font-size: 18px !important;
+  margin-right: 8px;
+}
+
+.search-input {
+  flex: 1;
+  color: #b0b0b0;
+  font-size: 14px !important; ;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+
+//-----------------button css likhi hai idhr------------------------//
+.custom-button {
+  background-color: #161616 !important;
+  height: 32px !important;
+  width: 32px !important;
+  color: #e0e0e0 !important;
+  border-radius: 12px !important;
+  font-size: 16px !important;
+  text-transform: none !important;
+  font-weight: 500 !important;
+  box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.05),
+    inset -2px -2px 5px rgba(0, 0, 0, 0.5),
+    3px 3px 10px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-button:hover {
+  background-color: #1f1f1f !important;
+}
+
+
+
+
+//------------------Dropdown------------------------------//
+.custom-dropdown {
+  background: #141414;
+  color: #a3a2a2  !important;
+  border-radius: 10px;
+  padding: 10px 16px ;
+  text-transform: none;
+  font-size: 14px !important;
+  font-weight: bold;
+  border: 2px solid #292929;
+  display: flex !important;
+  align-items: center;
+  max-width: 40% !important;
+  max-height: $icon-height;
+  transition: all 0.3s ease-in-out;
+  box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.05),
+      inset -2px -2px 5px rgba(0, 0, 0, 0.5),
+      3px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.custom-dropdown .MuiSelect-icon {
+  color: #ffffff;
+}
+
+.custom-dropdown:hover {
+  background: #1a1a1a;
+  border-color: #3a3a3a;
+}
+
+.MuiMenu-paper {
+  background: #1a1a1a !important;
+  color: #ffffff !important;
+}
+
+.MuiMenuItem-root {
+  color: #ffffff !important;
+}
+
+.MuiMenuItem-root:hover {
+  background: #2a2a2a !important;
+}
+
+//----------------------Profile-----------------------------//
+
+.profile-container {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-button {
+  padding: 0 !important;
+}
+
+.custom-avatar {
+  background-color: #161616 !important;
+  border: 2px solid #262626;
+  border-radius: 12px !important;
+  color: #ffffff !important;
+  width: $icon-width !important;
+  height: $icon-height !important;
+  font-size: 18px !important;
+  font-weight: bold;
+  box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.05),
+      inset -2px -2px 5px rgba(0, 0, 0, 0.5),
+      3px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.profile-menu {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.menu-list {
+  background-color: #161616 !important;
+  color: #ffffff !important;
+  border-radius: 12px !important;
+  padding: 10px 0 !important;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4) !important;
+}
+
+.menu-list .MuiMenuItem-root {
+  font-size: 16px !important;
+  padding: 12px 20px !important;
+}
+
+.menu-list .MuiMenuItem-root:hover {
+  background-color: #1f1f1f !important;
+}
