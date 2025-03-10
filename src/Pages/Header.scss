@@ -1,0 +1,51 @@
+$header-height: 48px;
+$CloseSidebar-width : 65px;
+$header-width : calc(100% - #{$CloseSidebar-width});
+$paddingX : 12px;
+$paddingY : 2px;
+$Uni-gap : 8px;
+$primary-color : #0F1214;
+
+
+
+.section-stack{
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  background-color: $primary-color;
+  width: $header-width;
+  height: $header-height;
+  gap: $Uni-gap;
+  margin-left: $CloseSidebar-width;
+}
+
+.section-box {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.section-one {
+  // background-color: #90caf9;
+  display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: $Uni-gap; // Primary light
+}
+
+.section-two {
+  // background-color: #f48fb1;
+  display: flex !important;
+  justify-content: space-between !important;  
+  align-items: center !important;
+  gap: $Uni-gap;
+}
+
+.section-three {
+  display: flex !important;
+  justify-content: flex-end  !important;
+  align-items: center   !important;
+  gap: $Uni-gap;
+  // background-color: #a5d6a7; // Success light
+}

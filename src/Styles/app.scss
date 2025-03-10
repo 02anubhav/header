@@ -1,5 +1,5 @@
 @use "mixin" as m;
-
+@use "sass:math";
 // COLORS
 $primary-color : #0F1214;
 $theme-color : #ffffff;
@@ -35,9 +35,15 @@ $paddingY : 2px;
 // MARGIN
 $marginX : 5px;
 $marginY : 0;
+
 //
-$section2-width : 60%;
-$section1-width : 40%;
+// $section1-width : math.div($header-width,3);
+// $section2-width :  math.div($header-width,3);
+// $section3-width :  math.div($header-width,3);
+
+$section1-width :35%;
+$section2-width :  65%;
+
 // SCROLLBAR
 $scrollbar-width : 8px;
 //icon
@@ -49,6 +55,36 @@ $icon-height:32px;
   box-sizing: border-box;
 }
 
+.box{
+color:white;
+font-family: sans-serif;
+// background: #1adb91;
+line-height: 14px;
+width: fit-content;
+padding-bottom: 1px;
+}
+
+
+.gradient-text {
+  font-size: 20px;
+  background-color: #1adb91;
+  font-family: Google Sans, Helvetica Neue, sans-serif;
+  font-weight: 100;
+  background: linear-gradient(to right, #5a8dee, #a874d0, #e35d74);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+.box h6{
+  margin-left: 1px;
+  font-size:8px;
+  
+  font-weight: 100;
+  
+}
+
 
 .container {
   @include m.flex(row, space-between, center, wrap);
@@ -57,21 +93,22 @@ $icon-height:32px;
   height: $header-height;
   padding: $paddingY $paddingX;
   margin-left: $CloseSidebar-width;
-
 }
 
 .Section2{
   // background-color: $redBg-color;
   width: $section2-width;
-  gap: $Uni-gap;
-  @include m.flex(row, flex-left, center, wrap);
+  // gap: $Uni-gap;
+  @include m.flex(row, space-between, center, wrap);
 }
 
 .section1{
   @include m.flex(row, space-between, center, wrap);
   // background-color:$cal-rtBg-color;
+  // width: $section1-width;
   gap: $Uni-gap;
 }
+
 
 
 .section3{
@@ -80,6 +117,9 @@ color: white;
 @include m.flex(row, flex-end , center, wrap);
 gap: $Uni-gap;
 }
+
+
+
 
 //------------------notification bar-------------------------------//
 
@@ -127,11 +167,12 @@ gap: $Uni-gap;
   display: flex;
   align-items: center;
   background: #141414;
+  // background-color: #1adb91;
   padding: 5px 8px;
   border-radius: 6px;
   border: 2px solid #262626;
   height: $icon-height;
-  max-width: 40% !important;
+  width: 100% !important;
   position: relative;
   box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.05),
       inset -2px -2px 5px rgba(0, 0, 0, 0.5),
@@ -174,9 +215,6 @@ gap: $Uni-gap;
   background-color: #1f1f1f !important;
 }
 
-
-
-
 //------------------Dropdown------------------------------//
 .custom-dropdown {
   background: #141414;
@@ -189,7 +227,7 @@ gap: $Uni-gap;
   border: 2px solid #292929;
   display: flex !important;
   align-items: center;
-  max-width: 40% !important;
+  width: 130px !important;
   max-height: $icon-height;
   transition: all 0.3s ease-in-out;
   box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.05),

@@ -2,6 +2,7 @@ import * as React from "react";
 import Section3 from "./Profile";
 import Notification from "./Notification";
 import EditDashboard from "./EditDashboard";
+import DropDown from "./DropDown";
 const Section1 = () => {
   const count=()=>{
      let val= 1;
@@ -11,6 +12,7 @@ const Section1 = () => {
     <div className="section1">
       <div className="section1__container2">
         <div className="section3">
+          <DropDown/>
           <EditDashboard>Edit Dashboard</EditDashboard>
           <Notification count={1} />
         </div>
