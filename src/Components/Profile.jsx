@@ -14,12 +14,15 @@ const ProfileDropdown = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
-  const input = "R";
+  
+  const input = [Data.name]
+  const charArray = input[0].split("");
+  console.log(charArray[0]);
 
   return (
     <div className="profile-container">
       <IconButton onClick={handleClick} className="avatar-button">
-        <Avatar className="custom-avatar">{input}</Avatar>
+        <Avatar className="custom-avatar">{charArray[0]}</Avatar>
       </IconButton>
       <Menu
         anchorEl={anchorEl}

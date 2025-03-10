@@ -1,4 +1,6 @@
 {
+  "name": "Dev",
+  "count": "2",
   "menuItems": [
     { "label": "Settings" },
     { "label": "Profile" },
@@ -9,5 +11,5 @@
     { "label": "Market2" },
     { "label": "Market3" }
   ]
- 
+
 }

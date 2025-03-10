@@ -25,15 +25,20 @@ import Notification from "../Components/Notification";
 import EditDashboard from "../Components/EditDashboard";
 import DropDown from "../Components/DropDown";
 import Search from "../Components/Search";
-
-import "./Header.scss"; // Import the SASS file
+import Data from "../Components/Data.json";
+import "./Header.scss"; 
 
 
 const ThreeSections = () => {
+  const count = [Data.count];
   return (
     <Stack className="section-stack">
       <Box className="section-box section-one">
-      <h6 class="gradient-text">Hi, Anubhav</h6>
+        {[Data.name].map((name, index) => (
+          <h6 key={index} className="gradient-text">
+            Hi, {name}
+          </h6>
+        ))}
       </Box>
       <Box className="section-box section-two">
         <Search />
@@ -41,7 +46,7 @@ const ThreeSections = () => {
       <Box className="section-box section-three">
         <DropDown />
         <EditDashboard />
-        <Notification count={1} />
+        <Notification count={count} />
         <Profile />
       </Box>
     </Stack>
