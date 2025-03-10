@@ -303,3 +303,16 @@ gap: $Uni-gap;
 .menu-list .MuiMenuItem-root:hover {
   background-color: #1f1f1f !important;
 }
+
+
+@media (max-width: 740px) {
+  .search-container{
+    width: 80% !important;
+    padding: 1px 4px !important;
+  }
+  .custom-dropdown{
+    min-width: 60px !important;
+    font-size: 10px !important;
+    padding: 1px;
+  }
+}
