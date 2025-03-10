@@ -128,7 +128,7 @@ gap: $Uni-gap;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: $icon-width;
+  min-width: $icon-width;
   height: $icon-height;
   background: #141414;
   border-radius: 12px;
@@ -227,7 +227,7 @@ gap: $Uni-gap;
   border: 2px solid #292929;
   display: flex !important;
   align-items: center;
-  width: 130px !important;
+  min-width: 50px !important;
   max-height: $icon-height;
   transition: all 0.3s ease-in-out;
   box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.05),

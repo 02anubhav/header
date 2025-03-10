@@ -27,13 +27,13 @@ import DropDown from "../Components/DropDown";
 import Search from "../Components/Search";
 
 import "./Header.scss"; // Import the SASS file
-import { Edit } from "@mui/icons-material";
+
 
 const ThreeSections = () => {
   return (
     <Stack className="section-stack">
       <Box className="section-box section-one">
-        <h6 class="gradient-text">Hello, Anubhav</h6>
+      <h6 class="gradient-text">Hi, Anubhav</h6>
       </Box>
       <Box className="section-box section-two">
         <Search />
